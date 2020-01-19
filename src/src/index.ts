@@ -23,7 +23,10 @@ async function from(request: ConfigurationLoadingRequestInterface): Promise<Conf
         imports.push(request.global.path)
 
     request.declaration = request.declaration || <any>{};
-    request.declaration.imports = imports;
+    if (request.declaration.imports)
+        request.declaration.imports = request.declaration.imports.concat(imports);
+    else
+        request.declaration.imports = imports;
 
     return l;
 }
@@ -41,7 +44,8 @@ export async function fromDeclaration(request: ConfigurationLoadingRequestInterf
         root: request.root,
         $: request.$,
         env: request.env,
-        configuration: request.configuration
+        configuration: request.configuration,
+        declaration: request.declaration
     });
 
     return c;

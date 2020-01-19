@@ -49,7 +49,10 @@ function from(request) {
             if (request.global && request.global.load && request.global.path)
                 imports.push(request.global.path);
             request.declaration = request.declaration || {};
-            request.declaration.imports = imports;
+            if (request.declaration.imports)
+                request.declaration.imports = request.declaration.imports.concat(imports);
+            else
+                request.declaration.imports = imports;
             return [2 /*return*/, l];
         });
     });
@@ -83,7 +86,8 @@ function fromDeclaration(request) {
                             root: request.root,
                             $: request.$,
                             env: request.env,
-                            configuration: request.configuration
+                            configuration: request.configuration,
+                            declaration: request.declaration
                         })];
                 case 2:
                     c = _a.sent();

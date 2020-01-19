@@ -98,5 +98,41 @@ describe('load', function () {
             });
         });
     });
+    it('can load files from declaration', function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var config, bar2, foo, promise;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, api.fromDeclaration({
+                            root: testResourcesRootPath,
+                            declaration: {
+                                imports: [path.join(testResourcesRootPath, 'js.js')]
+                            },
+                            env: { env: 'dev' },
+                            $: {
+                                foo: {
+                                    bar2: 'foobar'
+                                }
+                            }
+                        })];
+                    case 1:
+                        config = _a.sent();
+                        return [4 /*yield*/, config.get('foo.bar2')];
+                    case 2:
+                        bar2 = _a.sent();
+                        chai_1.expect(bar2).to.be.equal('foobar');
+                        return [4 /*yield*/, config.get('foo')];
+                    case 3:
+                        foo = _a.sent();
+                        return [4 /*yield*/, config.get('promise')];
+                    case 4:
+                        promise = _a.sent();
+                        chai_1.expect(foo).to.be.deep.equal({ bar: 'foobar', foobar: 'foobarfoobar', bar2: 'foobar' });
+                        chai_1.expect(promise).to.be.deep.equal('resolved');
+                        return [2 /*return*/];
+                }
+            });
+        });
+    });
 });
 //# sourceMappingURL=load.specs.js.map

@@ -39,4 +39,28 @@ describe('load', function () {
         const bar = await config.get<string>('foo.bar');
         expect(bar).to.be.equal('foobar');
     })
+
+    it('can load files from declaration', async function () {
+        const config = await api.fromDeclaration({
+            root: testResourcesRootPath,
+            declaration: {
+                imports: [path.join(testResourcesRootPath, 'js.js')]
+            },
+            env: {env: 'dev'},
+            $: {
+                foo: {
+                    bar2: 'foobar'
+                }
+            }
+        })
+
+        const bar2 = await config.get<string>('foo.bar2');
+        expect(bar2).to.be.equal('foobar');
+
+        const foo = await config.get<{ bar: string, foobar: string }>('foo');
+        const promise = await config.get<string>('promise');
+
+        expect(foo).to.be.deep.equal({bar: 'foobar', foobar: 'foobarfoobar', bar2: 'foobar'});
+        expect(promise).to.be.deep.equal('resolved');
+    })
 });
