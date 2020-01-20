@@ -11,4 +11,4 @@ export interface ConfigurationLoadingRequestUserInterface {
 export declare function fromFile(request: ConfigurationLoadingRequestInterface): Promise<Config.ConfigurationInterface>;
 export declare function fromDeclaration(request: ConfigurationLoadingRequestInterface): Promise<Config.ConfigurationInterface>;
 export declare function init(file: string): Promise<void>;
-export declare function save(config: Config.ConfigurationInterface, toFile: string): Promise<void>;
+export declare function save(config: Config.ConfigurationInterface, toFile: string): Promise<string>;

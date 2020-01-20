@@ -63,4 +63,20 @@ describe('load', function () {
         expect(foo).to.be.deep.equal({bar: 'foobar', foobar: 'foobarfoobar', bar2: 'foobar'});
         expect(promise).to.be.deep.equal('resolved');
     })
+
+    it('can load parameterized file', async function () {
+
+        const config = await api.fromDeclaration({
+            root: testResourcesRootPath,
+            declaration: {
+                imports: [path.join(testResourcesRootPath, 'js_%env%.json')]
+            },
+            env: {env: 'dev'},
+            $: {
+                foo: {
+                    bar2: 'foobar'
+                }
+            }
+        })
+    })
 });

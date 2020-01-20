@@ -31,7 +31,7 @@
     "typescript": "^3.7.4"
   },
   "dependencies": {
-    "@frenchex/config-lib": "^0.1.6",
+    "@frenchex/config-lib": "^0.1.7",
     "user-home": "^2.0.0"
   }
 }
