@@ -1,6 +1,6 @@
 {
   "name": "@frenchex/config-api",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Configuration API",
   "main": "src/src/index.js",
   "types": "src/src/index.d.ts",
@@ -31,6 +31,6 @@
     "typescript": "^3.7.4"
   },
   "dependencies": {
-    "@frenchex/config-lib": "^0.1.9"
+    "@frenchex/config-lib": "^0.1.10"
   }
 }
