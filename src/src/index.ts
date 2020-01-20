@@ -56,3 +56,6 @@ export async function init(file: string): Promise<void> {
     return await init.init(file);
 }
 
+export async function save(config: Config.ConfigurationInterface, toFile: string): Promise<void> {
+    await config.save(toFile)
+}
