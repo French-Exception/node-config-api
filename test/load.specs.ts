@@ -3,7 +3,7 @@ import {expect} from "chai"
 import * as api from "./../src/index"
 import * as path from "path"
 
-const testResourcesRootPath = path.normalize(path.join(__dirname, '..', '..', 'test-res'));
+const testResourcesRootPath = path.normalize(path.join(__dirname, '..', 'test-res'));
 
 describe('load', function () {
     it('can load from file', async function () {

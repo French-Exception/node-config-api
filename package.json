@@ -5,10 +5,10 @@
   "main": "src/src/index.js",
   "types": "src/src/index.d.ts",
   "scripts": {
-    "test": "mocha -r ts-node/register -r source-map-support/register src/test/**/*.js",
+    "test": "mocha -r ts-node/register -r source-map-support/register test/**/*.js",
     "build": "tsc",
     "dev": "tsc -w",
-    "cover": "nyc mocha -r ts-node/register -r source-map-support/register src/test/**/*.js"
+    "cover": "nyc mocha -r ts-node/register -r source-map-support/register test/**/*.js"
   },
   "keywords": [
     "configuration",
