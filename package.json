@@ -19,7 +19,7 @@
     "api"
   ],
   "license": "ISC",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "name": "@frenchex/config-api",
   "publishConfig": {
     "access": "public"
@@ -33,5 +33,5 @@
   },
   "types": "src/index.d.ts",
   "typings": "src/index.d.ts",
-  "version": "0.0.10"
+  "version": "0.0.11"
 }
