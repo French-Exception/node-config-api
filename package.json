@@ -1,25 +1,9 @@
 {
-  "name": "@frenchex/config-api",
-  "version": "0.0.9",
-  "description": "Configuration API",
-  "main": "src/src/index.js",
-  "types": "src/src/index.d.ts",
-  "scripts": {
-    "test": "mocha -r ts-node/register -r source-map-support/register test/**/*.js",
-    "build": "tsc",
-    "dev": "tsc -w",
-    "cover": "nyc mocha -r ts-node/register -r source-map-support/register test/**/*.js"
-  },
-  "keywords": [
-    "configuration",
-    "api"
-  ],
   "author": "Stéphane Erard <serard06@protonmail.com>",
-  "repository": "git@github.com:French-Exception/node-config-api.git",
-  "publishConfig": {
-    "access": "public"
+  "dependencies": {
+    "@frenchex/config-lib": "^0.1.11"
   },
-  "license": "ISC",
+  "description": "Configuration API",
   "devDependencies": {
     "@types/chai": "^4.2.7",
     "@types/mocha": "^5.2.7",
@@ -30,7 +14,24 @@
     "ts-node": "^8.5.4",
     "typescript": "^3.7.4"
   },
-  "dependencies": {
-    "@frenchex/config-lib": "^0.1.11"
-  }
+  "keywords": [
+    "configuration",
+    "api"
+  ],
+  "license": "ISC",
+  "main": "src/index.js",
+  "name": "@frenchex/config-api",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "git@github.com:French-Exception/node-config-api.git",
+  "scripts": {
+    "test": "mocha -r ts-node/register -r source-map-support/register test/**/*.js",
+    "build": "tsc",
+    "dev": "tsc -w",
+    "cover": "nyc mocha -r ts-node/register -r source-map-support/register test/**/*.js"
+  },
+  "types": "src/index.d.ts",
+  "typings": "src/index.d.ts",
+  "version": "0.0.9"
 }
