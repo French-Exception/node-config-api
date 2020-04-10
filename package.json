@@ -1,7 +1,7 @@
 {
   "author": "Stéphane Erard <serard06@protonmail.com>",
   "dependencies": {
-    "@frenchex/config-lib": "^0.1.13" 
+    "@frenchex/config-lib.ts": "^0.1.16"
   },
   "description": "Configuration API",
   "devDependencies": {
@@ -20,7 +20,7 @@
   ],
   "license": "ISC",
   "main": "dist/index.js",
-  "name": "@frenchex/config-api",
+  "name": "@frenchex/config-api.ts",
   "publishConfig": {
     "access": "public"
   },
