@@ -1,7 +1,7 @@
 {
   "author": "Stéphane Erard <serard06@protonmail.com>",
   "dependencies": {
-    "@frenchex/config-lib": "^0.1.13"
+    "@frenchex/config-lib": "^0.1.13" 
   },
   "description": "Configuration API",
   "devDependencies": {
