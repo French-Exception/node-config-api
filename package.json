@@ -1,7 +1,7 @@
 {
   "author": "Stéphane Erard <serard06@protonmail.com>",
   "dependencies": {
-    "@frenchex/config-lib.ts": "^0.1.16"
+    "@frenchex/config-lib.ts": "^0.2.0"
   },
   "description": "Configuration API",
   "devDependencies": {
@@ -34,5 +34,5 @@
   },
   "types": "src/index.d.ts",
   "typings": "src/index.d.ts",
-  "version": "0.0.12"
+  "version": "0.2.0"
 }
