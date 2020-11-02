@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Config = require("@frenchex/config-lib");
+const Config = require("@frenchex/config-lib.ts");
 exports.Config = Config;
 async function from(request) {
     const l = new Config.ConfigurationLoader();

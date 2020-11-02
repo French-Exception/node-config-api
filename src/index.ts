@@ -1,4 +1,4 @@
-import * as Config from "@frenchex/config-lib"
+import * as Config from "@frenchex/config-lib.ts"
 
 export {Config}
 
