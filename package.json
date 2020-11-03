@@ -1,7 +1,7 @@
 {
   "author": "Stéphane Erard <serard06@protonmail.com>",
   "dependencies": {
-    "@frenchex/config-lib.ts": "^0.2.2"
+    "@frenchex/config-lib": "^0.3.1"
   },
   "description": "Configuration API",
   "devDependencies": {
@@ -13,7 +13,8 @@
     "mocha": "^7.1.1",
     "nyc": "^15.0.0",
     "ts-node": "^8.5.4",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.4",
+    "@frenchex/config-cli": "*"
   },
   "keywords": [
     "configuration",
@@ -21,18 +22,23 @@
   ],
   "license": "ISC",
   "main": "dist/index.js",
-  "name": "@frenchex/config-api.ts",
+  "name": "@frenchex/config-api",
   "publishConfig": {
     "access": "public"
   },
   "repository": "git@github.com:French-Exception/node-config-api.git",
   "scripts": {
-    "test": "mocha -r ts-node/register -r source-map-support/register test/**/*.js",
+    "configure": "frenchex-config init",
+    "watch": "tsc -w",
     "build": "tsc",
-    "dev": "tsc -w",
-    "cover": "nyc mocha -r ts-node/register -r source-map-support/register test/**/*.js"
+    "test.unit": "mocha -r ts-node/register -r source-map-support/register test/**/*.js",
+    "cover": "nyc mocha -r ts-node/register -r source-map-support/register test/**/*.js",
+    "bump.patch": "release-it patch --ci",
+    "bump.minor": "release-it minor --ci",
+    "bump.major": "release-it major --ci",
+    "release": "npm publish"
   },
   "types": "src/index.d.ts",
   "typings": "src/index.d.ts",
-  "version": "0.2.2"
+  "version": "0.3.1"
 }

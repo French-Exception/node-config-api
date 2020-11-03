@@ -1,4 +1,4 @@
-import * as Config from "@frenchex/config-lib.ts";
+import * as Config from "@frenchex/config-lib";
 export { Config };
 export interface ConfigurationLoadingRequestInterface extends Config.ConfigurationLoaderFromFileRequestInterface {
     user?: ConfigurationLoadingRequestUserInterface;
