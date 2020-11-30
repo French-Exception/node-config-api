@@ -1,9 +1,9 @@
 import "mocha"
 import {expect} from "chai"
-import * as api from "./../src/index"
+import * as api from "./../index"
 import * as path from "path"
 
-const testResourcesRootPath = path.normalize(path.join(__dirname, '..', 'test-res'));
+const testResourcesRootPath = path.normalize(path.join(__dirname, '../..', 'test-res'));
 
 describe('load', function () {
     it('can load from file', async function () {
@@ -18,12 +18,13 @@ describe('load', function () {
         const foobar2 = await config.get<string>('foo.foobar');
         const foo = await config.get<{ bar: string, foobar: string }>('foo');
         const promise = await config.get<string>('promise');
+        const instance = await config.get<number>('foo.instance');
 
         expect(foobar).to.be.equal('foobar');
         expect(foobar2).to.be.equal('foobarfoobar');
-        expect(foo).to.be.deep.equal({bar: 'foobar', foobar: 'foobarfoobar'});
+        expect(foo).to.be.deep.equal({bar: 'foobar', foobar: 'foobarfoobar', instance: 2});
         expect(promise).to.be.deep.equal('resolved');
-
+        expect(instance).to.be.equal(1);
     })
 
     it('can load from declaration', async function () {
