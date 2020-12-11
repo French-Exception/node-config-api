@@ -1,10 +1,11 @@
 {
   "author": "Stéphane Erard <serard06@protonmail.com>",
   "dependencies": {
-    "@frenchex/config-lib": "^0.3.1"
+    "@frenchex/config-lib": "^0.3.5"
   },
   "description": "Configuration API",
   "devDependencies": {
+    "@frenchex/config-cli": "*",
     "@types/chai": "^4.2.7",
     "@types/mocha": "^5.2.7",
     "@types/node": "^13.1.5",
@@ -13,8 +14,7 @@
     "mocha": "^7.1.1",
     "nyc": "^15.0.0",
     "ts-node": "^8.5.4",
-    "typescript": "^3.7.4",
-    "@frenchex/config-cli": "*"
+    "typescript": "^3.7.4"
   },
   "keywords": [
     "configuration",
@@ -40,5 +40,5 @@
   },
   "types": "src/index.d.ts",
   "typings": "src/index.d.ts",
-  "version": "0.3.1"
+  "version": "0.3.2"
 }
